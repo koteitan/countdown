@@ -1,34 +1,132 @@
-body{
-  font-family: 'Segoe UI;Arial', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.cdheadline{
-  text-align: center;
+
+:root {
+  --text: #000;
+  --background: #fff;
+  --link: #000;
+  --border: 1px solid #000;
+}
+
+body{
+  align-items: center;
+  font-family:'Courier New', Courier, monospace;
+  background: var(--background);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  height: 100svh;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 20px;
+}
+
+a {
+  color: var(--link);
+}
+
+p {
+  line-height: 1.4;
+}
+
+.cdbox {
+  border: var(--border);
+  width: 100%;
+}
+
+.cdheadline {
+  align-items: center;
+  border-bottom: var(--border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.cdheadline > * {
+  padding: 12px;
+}
+
+.cdheadline-label {
+  flex: 1;
+}
+
+.cdname {
+  border-left: var(--border);
+  flex: 8;
+}
+
+.cdtime {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cdnumber {
+  border-right: var(--border);
+  flex: 1;
+  padding: 12px;
+}
+
+.cdnumber:last-child {
+  border-right: none;
+}
+
+.cdlabel {
+  display: block;
+  text-transform: uppercase;
+}
+
+.cdlabel + span {
+  display: block;
   font-size: 5rem;
   font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.cdtable {
-  margin:auto;
-}
-.tdhead{
-  font-size: 1rem;
-  text-align: center;
-  width: 20%;
-}
-.cdcolon{
-  font-size: 3rem;
-  text-align: center;
-  width: 10%;
-}
-.cdcell{
-  font-size: 3rem;
   text-align: center;
 }
-address {
-    text-align: right;
-    font-style: normal;
-    font-size: 0.9rem;
+
+.license {
+  border-top: var(--border);
+  padding: 12px;
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .cdheadline {
+    flex-wrap: wrap;
+  }
+
+  .cdname {
+    border-left: none;
+    border-top: var(--border);
+    min-width: 100%;
+  }
+
+  .cdtime {
+    flex-wrap: wrap;
+  }
+
+  .cdnumber {
+    border-bottom: var(--border);
+    flex: 2;
+    min-width: 50%;
+  }
+
+  .cdnumber:nth-child(2n) {
+    border-right: none;
+  }
+
+  .cdnumber:nth-last-child(2),
+  .cdnumber:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fff;
+    --background: #000;
+    --link: #fff;
+    --border: 1px solid #fff;
+  }
 }

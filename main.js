@@ -17,7 +17,7 @@ window.onload = function() {
     var str = urlsp.get("title");
     // sanitize the string
     str = str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    id2e("cdheadline").innerHTML = str;
+    id2e("cdname").innerHTML = str;
   }
   update_countdown();
   setInterval(update_countdown, 500);
