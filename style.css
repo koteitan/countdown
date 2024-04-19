@@ -1,3 +1,11 @@
+:root {
+  --h: 4; // Number of tdhead
+  --c: 3; // Number of cdcolon
+  --h-size-per-c-size: 2; // rate of tdhead to cdcolon
+  --all: calc(var(--h)*var(--h-size-per-c-size) + var(--c));a
+  --h-size: calc(100% / var(--all) * var(--h-size-per-c-size));
+  --c-size: calc(100% / var(--all));
+}
 body{
   font-family: 'Segoe UI;Arial', sans-serif;
   background-color: #000000;
@@ -16,16 +24,18 @@ body{
 .tdhead{
   font-size: 1rem;
   text-align: center;
-  width: 20%;
+  width: var(--h-size);
 }
 .cdcolon{
   font-size: 3rem;
   text-align: center;
-  width: 10%;
+  width: var(--c-size);
+  padding: 0.5rem;
 }
 .cdcell{
   font-size: 3rem;
   text-align: center;
+  padding: 0.5rem;
 }
 address {
     text-align: right;
