@@ -30,21 +30,20 @@ var update_countdown = function() {
   // get the difference in time
   var difference = target_date - current_date;
   
-  //detect minus
-  if(difference < 0) {
-    id2e("cdd").innerHTML = "0";
-    id2e("cdh").innerHTML = "0";
-    id2e("cdm").innerHTML = "0";
-    id2e("cds").innerHTML = "0";
-    return;
-  }
+  //fix minus
+  if(difference < 0) difference = 0;
 
   // set the time for the countdown
   var seconds = Math.floor((difference / 1000) % 60);
   var minutes = Math.floor((difference / 1000 / 60) % 60);
   var hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
   var days = Math.floor(difference / (1000 * 60 * 60 * 24));
- 
+
+  // fix zero
+  if(seconds < 10) seconds = "0" + seconds;
+  if(minutes < 10) minutes = "0" + minutes;
+  if(hours   < 10) hours   = "0" + hours;
+
   // set the display
   id2e("cdd").innerHTML = days;
   id2e("cdh").innerHTML = hours;
