@@ -33,18 +33,22 @@ p {
   line-height: 1.4;
 }
 
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+}
+
 .cdbox {
   border: var(--border);
   width: 100%;
 }
 
-.edbox {
-  border: var(--border);
-  width: 100%;
-  display: none;
-}
-
-.edheadline,
 .cdheadline {
   align-items: center;
   border-bottom: var(--border);
@@ -52,7 +56,6 @@ p {
   justify-content: space-between;
 }
 
-.edheadline,
 .cdheadline > * {
   padding: 12px;
 }
@@ -93,17 +96,66 @@ p {
   text-align: center;
 }
 
+.edbox {
+  align-items: center;
+  border-top: var(--border);
+  display: none;
+}
+
+.edheadline {
+  border-right: var(--border);
+  writing-mode: vertical-rl;
+  padding: 12px;
+}
+
+.edform {
+  display: flex;
+  flex: 6;
+  justify-content: space-between;
+}
+
+.edinput {
+  border-right: var(--border);
+  flex: 4;
+  padding: 12px;
+}
+
+.edtitle {
+  margin-bottom: 12px;
+}
+
+.eddatetime {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.eddatetime > * {
+  width: 100%;
+}
+
+.edlink {
+  font-weight: bold;
+  overflow: hidden;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.edlink span {
+  display: block;
+  font-size: 4rem;
+  line-height: 0;
+}
+
 .license {
   border-top: var(--border);
   padding: 12px;
   text-align: right;
 }
 
-
-.edtitle,
-.eddatetime {
-  border-right: var(--border);
-  padding: 12px;
+.langja,
+.langen {
+  display: none;
 }
 
 @media (max-width: 560px) {
@@ -135,6 +187,41 @@ p {
   .cdnumber:last-child {
     border-bottom: none;
   }
+
+  .edbox {
+    flex-wrap: wrap;
+  }
+  
+  .edheadline {
+    border-bottom: var(--border);
+    border-right: none;
+    width: 100%;
+    writing-mode:horizontal-tb;
+  }
+
+  .edform {
+    flex-wrap: wrap;
+  }
+  
+  .edinput {
+    border-bottom: var(--border);
+    border-right: none;
+  }
+
+  .edinput label {
+    text-transform: uppercase;
+  }
+
+  .edlink {
+    width: 100%;
+  }
+
+  .edlink span {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: calc(100% - 0.6em);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,9 +232,3 @@ p {
     --border: 1px solid #fff;
   }
 }
-
-.langja,
-.langen {
-  display: none;
-}
-

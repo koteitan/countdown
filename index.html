@@ -31,41 +31,43 @@
           <span id="cds">22</span>
         </div>
       </div>
+      <form id="form">
+        <div class="edbox" id="edbox">
+          <div class="edheadline">
+            <span class="langja">カウントダウンを編集:</span>
+            <span class="langen">Edit countdown:</span>
+          </div>
+          <div class="edform">
+            <div class="edinput">
+              <div class="edtitle">
+                <label class="langja" for="edname">タイトル:</label>
+                <label class="langen" for="edname">Title:</label>
+                <input type="text" id="edname" class="edname" placeholder="Title of countdown">
+              </div>
+              <div class="eddatetime">
+                <div class="edate">
+                  <label class="langja" for="eddate">日:</label>
+                  <label class="langen" for="eddate">Date:</label>
+                  <input type="date" id="eddate" class="eddate">
+                </div>
+                <div class="edtime">
+                  <label class="langja" for="edtime">時間:</label>
+                  <label class="langen" for="edtime">Time:</label>
+                  <input type="time" id="edtime" class="edtime">
+                </div>
+              </div>
+            </div>
+            <a href="" id="edlink" class="edlink langja" target="_blank">完成<span>→</span></a>
+            <a href="" id="edlink" class="edlink langen" target="_blank">DONE<span>→</span></a>
+          </div>
+        </div>
+      </form>
       <div class="license">
         <p><a href="./">countdown</a> version 1.4</p>
-        <p>is programmed by <a href="https://twitter.com/koteitan" target="_blank" rel="noopener noreferrer">koteitan</a></p>
+        <p>program:<a href="https://twitter.com/koteitan" target="_blank" rel="noopener noreferrer">koteitan</a> / design:<a href="https://twitter.com/an_apco" target="_blank" rel="noopener noreferrer">apco</a></p>
         <p>Source code is on <a href="https://github.com/koteitan/countdown" target="_blank" rel="noopener noreferrer">GitHub</a></p>
       </div>
     </div>
-
-    <br clear="all">
-
-    <form id="form">
-      <div class="edbox" id="edbox">
-        <div class="edheadline">
-          <span class="langja">カウントダウンを編集</span>
-          <span class="langen">Edit Countdown</span>
-        </div>
-        <div class="edform">
-          <div class="edtitle">
-            <span class="langja">タイトル</span>
-            <span class="langen">Title</span>
-            <input type="text" id="edname" class="edname" placeholder="title of countdown">
-          </div>
-          <div class="eddatetime">
-            <span class="langja">日時</span>
-            <span class="langen">Date and Time</span>
-            <input type="date" id="eddate" class="eddate">
-            <input type="time" id="edtime" class="edtime">
-          </div>
-          <div class="link">
-            <a href="" id="edlink" class="edlink" target="_blank">
-              <span class="langja">完成 or プレビュー</span>
-              <span class="langen">Done or Preview</span>
-            </a>
-        </div>
-      </div>
-    </form>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
