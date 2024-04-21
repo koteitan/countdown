@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div class="cdbox">
+    <div class="cdbox" id="cdbox">
       <div class="cdheadline">
         <span class="cdheadline-label">Countdown to:</span>
         <h1 class="cdname" id="cdname">Countdown</h1>
@@ -32,11 +32,40 @@
         </div>
       </div>
       <div class="license">
-        <p><a href="./">countdown</a> version 1.3</p>
+        <p><a href="./">countdown</a> version 1.4</p>
         <p>is programmed by <a href="https://twitter.com/koteitan" target="_blank" rel="noopener noreferrer">koteitan</a></p>
         <p>Source code is on <a href="https://github.com/koteitan/countdown" target="_blank" rel="noopener noreferrer">GitHub</a></p>
       </div>
     </div>
+
+    <br clear="all">
+
+    <form id="form">
+      <div class="edbox" id="edbox">
+        <div class="edheadline">
+          <span class="langja">カウントダウンを編集</span>
+          <span class="langen">Edit Countdown</span>
+        </div>
+        <div class="edform">
+          <div class="edtitle">
+            <span class="langja">タイトル</span>
+            <span class="langen">Title</span>
+            <input type="text" id="edname" class="edname" placeholder="title of countdown">
+          </div>
+          <div class="eddatetime">
+            <span class="langja">日時</span>
+            <span class="langen">Date and Time</span>
+            <input type="date" id="eddate" class="eddate">
+            <input type="time" id="edtime" class="edtime">
+          </div>
+          <div class="link">
+            <a href="" id="edlink" class="edlink" target="_blank">
+              <span class="langja">完成 or プレビュー</span>
+              <span class="langen">Done or Preview</span>
+            </a>
+        </div>
+      </div>
+    </form>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

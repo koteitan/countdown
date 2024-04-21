@@ -38,6 +38,13 @@ p {
   width: 100%;
 }
 
+.edbox {
+  border: var(--border);
+  width: 100%;
+  display: none;
+}
+
+.edheadline,
 .cdheadline {
   align-items: center;
   border-bottom: var(--border);
@@ -45,6 +52,7 @@ p {
   justify-content: space-between;
 }
 
+.edheadline,
 .cdheadline > * {
   padding: 12px;
 }
@@ -91,6 +99,13 @@ p {
   text-align: right;
 }
 
+
+.edtitle,
+.eddatetime {
+  border-right: var(--border);
+  padding: 12px;
+}
+
 @media (max-width: 560px) {
   .cdheadline {
     flex-wrap: wrap;
@@ -130,3 +145,9 @@ p {
     --border: 1px solid #fff;
   }
 }
+
+.langja,
+.langen {
+  display: none;
+}
+
