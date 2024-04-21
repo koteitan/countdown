@@ -108,7 +108,12 @@ var edit_form = function() {
   if(time.match(/^[0-2][0-9]:[0-5][0-9]$/) == null) {
     time = "00:00";
   }
-  target_date = new Date(date + "T" + time + ":00Z");
+  var localtime = new Date(date + "T" + time + ":00Z");
+  if(isNaN(localtime)) {
+    return;
+  }
+  // convert to UTC
+  target_date = new Date(localtime.getTime() + localtime.getTimezoneOffset() * 60000);
 
   // update countdown
   update_countdown();
