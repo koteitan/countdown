@@ -6,7 +6,7 @@ window.onload = function() {
   var isquery = query2form();
   if(!isquery){ // there is no date in query string
     // display editor
-    id2e("edbox").style.display = "block";
+    id2e("edbox").style.display = "flex";
     document.title = "countdown maker";
   }else{
     // edit html title
@@ -29,7 +29,7 @@ window.onload = function() {
 }
 
 var target_date; // target date to count down to
-var title = "title of countdown"; // title of the countdown
+var title = "Title of countdown"; // title of the countdown
 
 var id2e = function(id) {
   return document.getElementById(id);
@@ -87,10 +87,10 @@ var update_lang=(lang)=>{
   var ja = Array.from(document.getElementsByClassName('langja'));
   var en = Array.from(document.getElementsByClassName('langen'));
   if(lang=='ja'){
-    ja.map((x)=>x.style.display='inline');
+    ja.map((x)=>x.style.display='inline-block');
     en.map((x)=>x.style.display='none'  );
   }else{
-    en.map((x)=>x.style.display='inline');
+    en.map((x)=>x.style.display='inline-block');
     ja.map((x)=>x.style.display='none'  );
   }
 }
