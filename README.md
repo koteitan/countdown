@@ -12,8 +12,8 @@ https://koteitan.github.io/countdown/
 
 or
 
-+ https://koteitan.github.io/countdown/?date=YYYY-MM-DDThh:mm:ss&title=TITLE
-+ Set the date and title in the URL parameters
++ Set the date and title in the URL parameters as follows
+++ https://koteitan.github.io/countdown/?date=YYYY-MM-DDThh:mm:ss&title=TITLE
 + Please share the URL.
 
 ## Example
