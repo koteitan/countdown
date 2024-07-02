@@ -4,10 +4,17 @@ countdown timer maker
 ## How to use
 + Access to the following URL
 ``` 
-https://koteitan.github.io/countdown/?date=YYYY-MM-DDThh:mm:ss&title=TITLE
+https://koteitan.github.io/countdown/
 ```
++ Set the title, date and time.
++ push 'DONE'.
++ Please share the URL with others of the new page.
+
+or
+
++ https://koteitan.github.io/countdown/?date=YYYY-MM-DDThh:mm:ss&title=TITLE
 + Set the date and title in the URL parameters
-+ Please share the URL with others
++ Please share the URL.
 
 ## Example
 https://koteitan.github.io/countdown/?date=2024-08-01T00:00:00&title=August
